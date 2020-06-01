@@ -1,0 +1,32 @@
+{
+  "name": "api-automacao-salas",
+  "version": "1.0.0",
+  "description": "API responsavel por disponibilizar os dados vindos do arduino em um dashboard e salva-los em um banco de dados",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.ts",
+    "start": "tsc && node build/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessPergentino/api-automacao-salas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessPergentino/api-automacao-salas/issues"
+  },
+  "homepage": "https://github.com/JessPergentino/api-automacao-salas#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.6",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  }
+}
