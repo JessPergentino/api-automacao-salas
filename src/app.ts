@@ -1,5 +1,6 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import cors from "cors";
+import sequelize from "./database";
 
 import main from "./routes/index";
 
@@ -10,7 +11,7 @@ app.use(
     origin: ["http://localhost:3000", "https://ahp-spa.herokuapp.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-  }),
+  })
 );
 app.use(express.json());
 
@@ -38,6 +39,8 @@ app.use(
   }
 );
 
-const PORT: any = process.env.PORT || 3001;
+const PORT: string | number = process.env.PORT || 3001;
 
-app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
+sequelize.sync().done(() => {
+  app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
+});
