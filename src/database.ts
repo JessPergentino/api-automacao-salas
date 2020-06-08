@@ -5,7 +5,8 @@ const sequelize = new Sequelize({
   database: "iot_bd",
   username: "postgres",
   password: "postgresql",
-  host: "192.168.1.67:5432",
+  host: "192.168.1.67",
+  port: 5432,
   dialect: "postgres",
 });
 
