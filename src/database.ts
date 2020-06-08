@@ -5,7 +5,7 @@ const sequelize = new Sequelize({
   database: "iot_bd",
   username: "postgres",
   password: "postgresql",
-  host: "192.168.1.67",
+  host: "https://dbaf5aad0c1b.ngrok.io",
   dialect: "postgres",
 });
 
